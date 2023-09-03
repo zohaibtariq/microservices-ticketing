@@ -1,0 +1,6 @@
+cd /ticketing/auth
+docker build -t zohaibtariq/auth .
+docker push zohaibtariq/auth
+
+
+skaffold dev
