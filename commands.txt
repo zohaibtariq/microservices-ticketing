@@ -1,6 +1,20 @@
-cd /ticketing/auth
+cd /Volumes/Projects/code/microservice/ticketing/auth
 docker build -t zohaibtariq/auth .
 docker push zohaibtariq/auth
 
+cd /Volumes/Projects/code/microservice/ticketing/infra/k8s
 
+k apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/cloud/deploy.yaml
+
+k apply -f .
+
+k rollout restart deployment auth-depl
+
+cd /Volumes/Projects/code/microservice/ticketing
 skaffold dev
+
+
+ls -l /var/run/docker.sock
+cd /var/run
+com.docker.vmnetd.sock
+docker.sock -> /Users/zohaib/.docker/run/docker.sock
