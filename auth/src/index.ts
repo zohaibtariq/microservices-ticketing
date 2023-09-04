@@ -1,14 +1,21 @@
-import express from 'express';
-import {json} from 'body-parser';
+import express from 'express'
+import {json} from 'body-parser'
 
-const app = express();
-app.use(json());
+import {currentUserRouter} from "./current-user"
+import {signinRouter} from "./signin"
+import {signoutRouter} from "./signout"
+import {signupRouter} from "./signup"
 
-app.get('/api/users/currentuser', (req, res) => {
-    res.send('Hi there!!! /api/users/currentuser');
-})
+const app = express()
 
-const port = 3000;
+app.use(json())
+app.use(currentUserRouter)
+app.use(signinRouter)
+app.use(signoutRouter)
+app.use(signupRouter)
+
+const port = 3000
+
 app.listen(port, () => {
     console.log(`Auth Service Listening On Port : ${port}`)
 })
