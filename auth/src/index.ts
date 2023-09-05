@@ -5,6 +5,7 @@ import {currentUserRouter} from "./current-user"
 import {signinRouter} from "./signin"
 import {signoutRouter} from "./signout"
 import {signupRouter} from "./signup"
+import {errorHandler} from "./middlewares/error-handler";
 
 const app = express()
 
@@ -13,6 +14,7 @@ app.use(currentUserRouter)
 app.use(signinRouter)
 app.use(signoutRouter)
 app.use(signupRouter)
+app.use(errorHandler)
 
 const port = 3000
 
