@@ -12,9 +12,9 @@ import {NotFoundError} from "./errors/not-found-error";
 
 const app = express()
 
-app.all('*', async () => {
-    throw new NotFoundError();
-})
+// app.all('*', async () => {
+//     throw new NotFoundError();
+// })
 
 // no need to call async with next due to use of express-async-errors now we can directly throw errors from async func as well
 // app.all('*', async (req, res, next) => {
