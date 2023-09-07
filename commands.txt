@@ -18,3 +18,10 @@ ls -l /var/run/docker.sock
 cd /var/run
 com.docker.vmnetd.sock
 docker.sock -> /Users/zohaib/.docker/run/docker.sock
+
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=6f2dc6f9bbebb34cff6af1c786001330aba2f9e99e56b1dfdcaced1e4f6f8841
+
+k describe pod PODNAME
+
+k get secrets
+
