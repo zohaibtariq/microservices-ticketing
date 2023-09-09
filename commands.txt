@@ -13,7 +13,6 @@ k rollout restart deployment auth-depl
 cd /Volumes/Projects/code/microservice/ticketing
 skaffold dev
 
-
 ls -l /var/run/docker.sock
 cd /var/run
 com.docker.vmnetd.sock
@@ -25,3 +24,4 @@ k describe pod PODNAME
 
 k get secrets
 
+npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server
