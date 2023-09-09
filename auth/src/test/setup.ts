@@ -1,8 +1,17 @@
-import {MongoMemoryServer} from "mongodb-memory-server";
-import mongoose from "mongoose";
-import {app} from "../app";
+import {MongoMemoryServer} from "mongodb-memory-server"
+import mongoose from "mongoose"
+// import {app} from "../app"
+// import request from "supertest"
 
-let mongo: any;
+// declare global {
+//     namespace NodeJS {
+//         interface Global {
+//             signin(): Promise<string[]>
+//         }
+//     }
+// }
+
+let mongo: any
 
 beforeAll(async () => {
     process.env.JWT_KEY = 'SDGSDFGsdfg35534SDf5'; // Random Key
@@ -22,3 +31,16 @@ afterAll(async () => {
     await mongo.stop()
     await mongoose.connection.close()
 })
+
+// global.signin = async () => {
+//     const email = 'test@test.com'
+//     const password = 'p@sswOrd123'
+//     const response = await request(app)
+//         .post('/api/users/signup')
+//         .send({
+//             email, password
+//         })
+//         .expect(201)
+//     console.log(response.get('Set-Cookie'))
+//     return response.get('Set-Cookie')
+// }
