@@ -29,3 +29,5 @@ npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongo
 cd /Volumes/Projects/code/microservice/ticketing/client
 docker build -t zohaibtariq/client .
 docker push zohaibtariq/client
+
+to re listed next.config file just kill client pod it will auto create itslef and re load and re listen this file
