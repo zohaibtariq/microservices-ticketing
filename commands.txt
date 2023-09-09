@@ -25,3 +25,7 @@ k describe pod PODNAME
 k get secrets
 
 npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server
+
+cd /Volumes/Projects/code/microservice/ticketing/client
+docker build -t zohaibtariq/client .
+docker push zohaibtariq/client
