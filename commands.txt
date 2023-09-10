@@ -43,5 +43,9 @@ k get services -n ingress-nginx
 
 // change code in common
 npm run pub
-cd auth
+cd /Volumes/Projects/code/microservice/ticketing/auth
 npm update @microservices-ticketing/common
+
+cd /Volumes/Projects/code/microservice/ticketing/tickets
+docker build -t zohaibtariq/tickets .
+docker push zohaibtariq/tickets

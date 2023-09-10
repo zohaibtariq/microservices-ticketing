@@ -8,13 +8,13 @@ const start = async () => {
         throw new Error('MONGO_URI must be defined.')
     try{
         await mongoose.connect(process.env.MONGO_URI)
-        console.log('Auth Service ::: Connected to mongodb.')
+        console.log('Tickets Service ::: Connected to mongodb.')
     } catch (e) {
         console.error(e)
     }
     const port = 3000
     app.listen(port, () => {
-        console.log(`Auth Service ::: Listening On Port : ${port}`)
+        console.log(`Tickets Service ::: Listening On Port : ${port}`)
     })
 }
 start()
