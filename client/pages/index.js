@@ -27,7 +27,9 @@ export const LandingPage = ({currentUser}) => {
     </div>
 }
 
+// this is a Page Component and context = {req, res}
 LandingPage.getInitialProps = async (context) => {
+    console.log('Page Props')
     const client = buildClient(context)
     const {data} = await client.get('/api/users/currentuser')
     return data
