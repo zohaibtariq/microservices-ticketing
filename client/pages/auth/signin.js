@@ -1,11 +1,12 @@
-import {useState} from "react";
-import useRequest from "../../hooks/use-request";
-import Router from "next/router";
+import {useState} from "react"
+import useRequest from "../../hooks/use-request"
+import Router from "next/router"
+
 export default () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const {doRequest, errors} = useRequest({
-        url: '/api/users/signup',
+        url: '/api/users/signin',
         method: 'post',
         body: {email, password},
         onSuccess: (response) => Router.push('/')

@@ -1,7 +1,30 @@
-import buildClient from "../api/build-client";
+import buildClient from "../api/build-client"
+import Router from "next/router"
+import useRequest from "../hooks/use-request";
+
 export const LandingPage = ({currentUser}) => {
-    console.log(currentUser)
-    return currentUser ? <h1>You are signed in as {currentUser.email}</h1> : <h1>You are not signed in</h1>
+
+    const {doRequest} = useRequest({
+        url: '/api/users/signout',
+        method: 'post',
+        body: {},
+        onSuccess: (response) => Router.push('/')
+    })
+
+    const signOut = () => {
+        // test1@test.test
+        doRequest()
+    }
+
+    return currentUser ? <div>
+        <h1>You are signed in as {currentUser.email}</h1>
+        <button className="btn btn-danger" onClick={signOut}>Sign Out</button>
+    </div> : <div>
+        <h1>You are not signed in</h1>
+        <button className="btn btn-primary" onClick={(e) => Router.push('/auth/signin')}>Sign In</button>
+        &nbsp;&nbsp;&nbsp;
+        <button className="btn btn-primary" onClick={(e) => Router.push('/auth/signup')}>Sign Up</button>
+    </div>
 }
 
 LandingPage.getInitialProps = async (context) => {
