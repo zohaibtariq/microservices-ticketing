@@ -15,7 +15,7 @@ export default () => {
         doRequest()
     }
     return <form action="" onSubmit={onsubmit}>
-        <h1>Sign Up</h1>
+        <h1>Sign In</h1>
         <div className="form-group">
             <label>Email Address</label>
             <input value={email} onChange={e => setEmail(e.target.value)} className="form-control" type="text"/>
@@ -25,6 +25,6 @@ export default () => {
             <input value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" type="password"/>
         </div>
         {errors}
-        <button className="btn btn-primary">Sign Up</button>
+        <button className="btn btn-primary">Sign In</button>
     </form>
 }
