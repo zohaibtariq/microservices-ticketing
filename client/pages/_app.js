@@ -13,13 +13,13 @@ const AppComponent = ({Component, pageProps}) => {
 
 // this is Custom App Component and context = {Component, ctx: {req, res}}
 AppComponent.getInitialProps = async (appContext) => {
-    console.log('App Component Props')
+    // console.log('App Component Props')
     const client = buildClient(appContext.ctx)
     const {data} = await client.get('/api/users/currentuser')
     let pageProps = {}
     if(appContext.Component.getInitialProps)
         pageProps = await appContext.Component.getInitialProps(appContext.ctx)
-    console.log(pageProps)
+    // console.log(pageProps)
     return {
         pageProps,
         ...data

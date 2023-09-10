@@ -10,7 +10,7 @@ export default ({url, method, body, onSuccess}) => {
                 onSuccess(response.data)
             response.data
         }).catch((e) => {
-            console.log(e)
+            // console.log(e)
             setErrors(
                 <div className="alert alert-danger">
                     <h4>Oops</h4>

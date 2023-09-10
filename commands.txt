@@ -41,3 +41,7 @@ k get services
 used to fetch services ina specific namespace
 k get services -n ingress-nginx
 
+// change code in common
+npm run pub
+cd auth
+npm update @microservices-ticketing/common
