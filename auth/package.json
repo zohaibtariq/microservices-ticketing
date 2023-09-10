@@ -15,8 +15,16 @@
     ]
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "author": {
+    "name": "Zohaib Tariq",
+    "email": "zebwebdev@gmail.com",
+    "url": "https://www.linkedin.com/in/zohaib-tariq/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zohaibtariq/microservices-ticketing"
+  },
   "dependencies": {
     "@types/cookie-session": "^2.0.45",
     "@types/express": "^4.17.17",
