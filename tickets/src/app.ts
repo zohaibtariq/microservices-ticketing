@@ -4,6 +4,7 @@ import {json} from 'body-parser'
 import cookieSession from 'cookie-session'
 
 import {errorHandler} from '@microservices-ticketing/common'
+import {createTicketRouter} from "./routes/new";
 
 const app = express()
 app.set('trust proxy', true)
@@ -15,5 +16,6 @@ app.use(cookieSession({
 }))
 
 app.use(errorHandler)
+app.use(createTicketRouter)
 
 export {app}
