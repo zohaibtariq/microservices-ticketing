@@ -31,3 +31,13 @@ docker build -t zohaibtariq/client .
 docker push zohaibtariq/client
 
 to re listed next.config file just kill client pod it will auto create itslef and re load and re listen this file
+
+show all namespaces
+k get namespace
+
+will show services in default namespace
+k get services
+
+used to fetch services ina specific namespace
+k get services -n ingress-nginx
+
