@@ -14,7 +14,7 @@ import mongoose from "mongoose"
 let mongo: any
 
 beforeAll(async () => {
-    process.env.JWT_KEY = 'SDGSDFGsdfg35534SDf5'; // Random Key
+    process.env.JWT_KEY = 'Y6WTFKZICYR7QWU1BXGWGZV2PWL9OFME6KX7O7E4BLATNVANRAC5D7UESZIXCWTIFSFBBLX3N00YNREB998428GOB8OQZIKYNYBU'; // Random Key
     mongo = await MongoMemoryServer.create();
     const mongoUri = mongo.getUri();
     await mongoose.connect(mongoUri)

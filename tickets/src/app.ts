@@ -3,7 +3,7 @@ import 'express-async-errors'
 import {json} from 'body-parser'
 import cookieSession from 'cookie-session'
 
-import {errorHandler} from '@microservices-ticketing/common'
+import {errorHandler, currentUser} from '@microservices-ticketing/common'
 import {createTicketRouter} from "./routes/new";
 
 const app = express()
@@ -15,6 +15,7 @@ app.use(cookieSession({
     secure: process.env.NODE_ENV !== 'test'
 }))
 
+app.use(currentUser)
 app.use(errorHandler)
 app.use(createTicketRouter)
 
