@@ -1,8 +1,8 @@
-import request from "supertest";
+import request from 'supertest'
 import {app} from '../../app'
 import {generateRandomString, generateRandomInteger} from '@microservices-ticketing/common'
-import {Ticket} from "../../models/tickets";
-import mongoose from "mongoose";
+import {Ticket} from '../../models/tickets'
+import mongoose from 'mongoose'
 
 it('returns a 404 if the ticket is not found', async() => {
     const id = new mongoose.Types.ObjectId().toHexString()
