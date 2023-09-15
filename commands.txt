@@ -1,3 +1,5 @@
+#/Applications/Docker.app/Contents/MacOS/uninstall
+
 cd /Volumes/Projects/code/microservice/ticketing/auth
 docker build -t zohaibtariq/auth .
 docker push zohaibtariq/auth
@@ -5,6 +7,7 @@ docker push zohaibtariq/auth
 cd /Volumes/Projects/code/microservice/ticketing/infra/k8s
 
 k apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/cloud/deploy.yaml
+k apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
 
 k apply -f .
 
@@ -44,6 +47,8 @@ k get services -n ingress-nginx
 // change code in common
 npm run pub
 cd /Volumes/Projects/code/microservice/ticketing/auth
+npm update @microservices-ticketing/common
+cd /Volumes/Projects/code/microservice/ticketing/tickets
 npm update @microservices-ticketing/common
 
 cd /Volumes/Projects/code/microservice/ticketing/tickets
