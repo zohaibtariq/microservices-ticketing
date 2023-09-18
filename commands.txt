@@ -61,3 +61,7 @@ k port-forward nats-depl-5d5c6894d9-7r6fk 4222:4222
 cd /Volumes/Projects/code/microservice/ticketing/nats-test
 npm run publish
 npm run listen
+
+in iterm2 cmd+d can open multiple windows vertically
+
+in iterm2 cmd+shift+d can open multiple windows horizontally
