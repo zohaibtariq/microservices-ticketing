@@ -60,3 +60,4 @@ k get pods
 k port-forward nats-depl-5d5c6894d9-7r6fk 4222:4222
 cd /Volumes/Projects/code/microservice/ticketing/nats-test
 npm run publish
+npm run listen
